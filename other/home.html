@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
+
 <body style="background-color:#d1d1d1;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 card">
                 <div class="card-body">
-                    <h2>Bienvenido: @emai</h2>
+                    <h2 id="welcome">Bienvenido: @emai</h2>
                 </div>
             </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-4 text-bg-light rounded-2">
+                <div class="d-flex flex-column p-2 gap-3">
+                    <h3>Agregar producto</h3>
+                    <input id="nameProduct" type="text" placeholder="Nombre del producto">
+                    <input id="priceProduct" type="number" placeholder="precio">
+                    <input id="descriptionProduct" type="text" placeholder="Descripcion">
+                    <button type="button" onclick="agregarProducto()" class="text-bg-primary p-3" >Agregar</button>
+
+                </div>  
+            </div>
+            <div class="col-md-8">
+            
+            <table class="table mt-30">
+                <thead>
+                    <tr>
+                        <th id="idShow" scope="col">ID</th>
+                        <th id="nameShow" scope="col">Nombre Producto</th>
+                        <th id="priceShow" scope="col">Precio</th>
+                        <th id="descriptionShow" scope="col">Descripcion</th>
+                        <th id="actionShow" scope="col">Acciones</th>
+                    </tr>
+            
+                <tbody id="product">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>accion</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+
+
+            
         </div>
     </div>
     <button class="btn btn-danger" onclick="logout()">Cerrar sesión</button>
     <script src="./../assets/js/scripts.js"></script>
     <script src="./../assets/js/guardian.js"></script>
 </body>
+
 </html>
